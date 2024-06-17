@@ -206,7 +206,7 @@ html {
   font-weight: 600;
 }
 .container-from button {
-  background-color: var(--color_2);
+  background: linear-gradient(#845eee, #652cd1);
   border-radius: 25px;
   border: none;
   color: var(--color_7);
