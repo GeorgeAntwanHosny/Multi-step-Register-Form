@@ -24,4 +24,4 @@
 
 - ### The page should be responsive on different screen sizes.
 
-- ### Deploy the solution with Repository URL and Demo URL.
+- ### Deploy the solution with Repository URL and [Demo URL](https://multi-step-register-form-ten.vercel.app/).
