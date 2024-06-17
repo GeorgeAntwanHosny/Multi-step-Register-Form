@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Register Form</title>
+    <link rel="stylesheet" href="./app.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container-app">
+        <div class="container-circle-image-top">
+            <img src="images/blur-radial.svg" alt="blur-radial">
+        </div>
+        
+        <div class="container-from" id="Register-form" >
+            <p class="inter-medium ">Register</p>
+            <form id="Register-form-submit">
+                <div>
+                    <label class="inter-medium" for="name">Name</label>
+                    <input class="error-input" type="text" name="name" id="name" placeholder="enter your name" required >
+                    <p id="error-name"></p>
+                </div>
+
+                <div>
+                    <label class="inter-medium" for="emai">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                    <p id="error-email"></p>
+                </div>
+                <div>
+                    <button id="button-submit-register" class="inter-medium" type="submit">continue</button>
+                </div>
+            </form>
+            <div class="steps inter-medium">
+                <p>step 1 of 3</p>
+                <div class="step active-step"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+            </div>   
+        </div>
+        <div class="container-from" id="interset-topic-form"  style="display: none;">
+            <p class="inter-medium ">Which topics you are interested in?</p>
+            <form class="inter-regular">
+                <div class="selectable-button inter-medium" data-value="Software Development">Software Development</div>
+                <div class="selectable-button inter-medium" data-value="User Experience">User Experience</div>
+                <div class="selectable-button inter-medium" data-value="Graphic Design">Graphic Design</div>
+                <input type="hidden" name="selectedTopics" id="selectedTopics">
+                <div>
+                    <button class="inter-medium" type="submit" id="submit-interset-topic-form">continue</button>
+                </div>
+            </form>
+            <div class="steps inter-medium">
+                <p>step 2 of 3</p>
+                <div class="step prev-step"></div>
+                <div class="step active-step"></div>
+                <div class="step "></div>
+            </div>   
+        </div>
+        <div class="container-from" id="Summary-form" style="display: none;">
+            <p class="inter-medium ">Summary</p>
+            <form class="inter-medium">
+                <div>
+                   <p>Name: <span id="name-summary"></span></p>
+                </div>
+                <div>
+                    <p>Email: <span id="email-summary"></span></p>
+                 </div>
+                 <div>
+                    <p>Topics:</p>
+                    <ul id="topic-summary">
+                       
+                       
+                    </ul>
+                 </div>
+               
+                <div>
+                    <button class="inter-medium"  id="confirm-button">confirm</button>
+                </div>
+            </form>
+            <div class="steps inter-medium">
+                <p>step 3 of 3</p>
+                <div class="step prev-step"></div>
+                <div class="step prev-step"></div>
+                <div class="step active-step"></div>
+            </div>   
+        </div>
+
+        <div class="container-circle-image-bottom">
+            <img src="images/blur-radial.svg" alt="blur-radial">
+        </div>
+        
+    </div>
+   
+</body>
+</html>
